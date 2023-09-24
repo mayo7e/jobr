@@ -21,7 +21,7 @@ const route = useRouter()
                     options={{
                         headerStyle: { backgroundColor: COLORS.primary },
                         headerShadowVisible: false,
-                        headerLeft: ()=>(
+                         headerLeft: ()=>(
                             <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
                 
                         ),
@@ -42,13 +42,11 @@ const route = useRouter()
                             <Welcome />
                             <Popularjobs />
                             <Nearbyjobs />
-                            <Nearbyjobs />
                     </View>
                 </ScrollView>
                
         </SafeAreaView>
-            
-    
+                
      );
 }
  
