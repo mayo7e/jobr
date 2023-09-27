@@ -19,7 +19,7 @@ const route = useRouter()
     
                 <Stack.Screen
                     options={{
-                        headerStyle: { backgroundColor: COLORS.primary },
+                        headerStyle: { backgroundColor: COLORS.lightWhite },
                         headerShadowVisible: false,
                          headerLeft: ()=>(
                             <ScreenHeaderBtn iconUrl = {icons.menu} dimension ="60%" />
