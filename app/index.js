@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Button, Text, ScrollView, SafeAreaView } from "react-native";
+import { View, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRouter } from "expo-router";
 
 import { 
@@ -26,10 +26,11 @@ const route = useRouter()
                 
                         ),
                         headerRight: ()=>(
-                            <ScreenHeaderBtn iconUrl = {images.profile} dimension ="100%" />
+                            <ScreenHeaderBtn  iconUrl = {images.profile} dimension ="100%" />
                         ),
                         headerTitle: "",
-                    }}
+                    }
+                }
                 />
 
                 <ScrollView showsVerticalScrollIndicator={false} >
