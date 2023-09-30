@@ -15,8 +15,6 @@ const Nearbyjobs = () => {
     num_pages: 1,
   })
 
-
-
   return (
     <View style={styles.container}>
 
