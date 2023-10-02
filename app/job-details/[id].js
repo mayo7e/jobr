@@ -16,6 +16,7 @@ import { ScreenHeaderBtn, JobAbout, Company, JobFooter, Specifics, JobTabs } fro
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
+const tabs = ["About", "Qualifications", "Responsibilites"]
 
 
 const JobDetails = () => {
@@ -27,6 +28,7 @@ const JobDetails = () => {
     })
 
         const [refreshing, setRefreshing] = useState(false)
+        const [activeTab, setActiveTab] = useState(tabs[0])
 
         
         const onRefresh = () => {}
@@ -77,7 +79,9 @@ const JobDetails = () => {
                                     />
 
                                     <JobTabs 
-                                    
+                                        tabs={tabs}
+                                        activeTab={activeTab}
+                                        setActiveTab={setActiveTab}
                                     />
                             </View>
                         )
@@ -85,7 +89,7 @@ const JobDetails = () => {
                     </ScrollView>
                 </>
 
-               
+             
         </SafeAreaView>
                
      );

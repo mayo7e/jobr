@@ -3,13 +3,12 @@ import { View, Text, Image } from 'react-native'
 
 import styles from './company.style'
 
-import  {COLORS, icons} from "../../../constants"
+import  {icons} from "../../../constants"
 
 import { checkImageURL } from "../../../utils";
 
 const Company = ({companyLogo, jobTitle, companyName, location }) => {
 
-  console.log(jobTitle)
   return (
     <View style={styles.container} >
         <View style={styles.logoBox} >
