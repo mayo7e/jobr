@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, FlatList } from 'react-native'
 
 import styles from './tabs.style'
-import{Specifics} from "../../../components"
+
 import { SIZES } from '../../../constants'
 
 
@@ -14,22 +14,6 @@ const TabButton = ({name, activeTab, onHandleSearchType}) => (
 )
 
 const Tabs = ({tabs, activeTab, setActiveTab}) => {
-  // console.log(tabs)
-
- const displayTabContent = () => {
-    switch (activeTab) {
-      case "Qualifications":
-        return <Specifics 
-                    title= "Qualifications"
-                    points = {tabs[0].job_highlights?.qualifications}
-        />
-      case "About":
-      case "Responsbilities" :
-        
-      default:
-        break;
-    }
-  }
 
   return (
 
@@ -49,7 +33,7 @@ const Tabs = ({tabs, activeTab, setActiveTab}) => {
             horizontal
           />
     
-            {displayTabContent()}
+           
     </View>
   )
 }

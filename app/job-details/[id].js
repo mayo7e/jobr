@@ -2,6 +2,7 @@
 import { React, useCallback, useState } from "react";
 import { Stack, useRouter, useGlobalSearchParams } from "expo-router"
 
+
 import { 
     View,
     Text,
@@ -32,6 +33,22 @@ const JobDetails = () => {
 
         
         const onRefresh = () => {}
+
+        const displayTabContent = () => {
+            // console.log(data)
+            switch (activeTab) {
+              case "Qualifications":
+                return <Specifics 
+                            title= "Qualifications"
+                            points = {data[0].job_highlights?.Qualifications ?? ["N/A"] }
+                />
+              case "About":
+              case "Responsbilities" :
+                
+              default:
+                break;
+            }
+          }
 
     return ( 
             
@@ -83,6 +100,8 @@ const JobDetails = () => {
                                         activeTab={activeTab}
                                         setActiveTab={setActiveTab}
                                     />
+
+                                     {displayTabContent()}
                             </View>
                         )
                     }
