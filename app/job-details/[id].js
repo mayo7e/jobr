@@ -32,7 +32,12 @@ const JobDetails = () => {
         const [activeTab, setActiveTab] = useState(tabs[0])
 
         
-        const onRefresh = () => {}
+        const onRefresh = useCallback(() => {
+                setRefreshing(true)
+                fetch
+                setRefreshing(false)
+
+            }, [])
 
         const displayTabContent = () => {
             // console.log(data)
